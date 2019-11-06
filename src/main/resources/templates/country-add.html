@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Isil Catálogo - PC03</title>
+</head>
+<body>
+<div class="container">
+    <h3>Nuevo Pais</h3>
+    <div>
+        <form action="#" method="post" th:object="${country}" th:action="@{/countries/save}">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control form-control-sm" id="name" placeholder="Ingrese el nombre del Pais" th:field="*{name}">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
